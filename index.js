@@ -17,20 +17,24 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  var str = `In your cart, you have `;
+  var str = 'In your cart, you have ';
   if (cart.length === 0) {
     console.log('Your shopping cart is empty.');
   }
   for (var i = 0; i < cart.length; i++) {
-    for (var food in cart[i]) {
-      if (i < cart.length - 1) {
-        str += `${food} at $${cart[i][food]}, `;
-      } else {
-        str += `and ${food} at $${cart[i][food]}.`;
+    for (var value in cart[i]) {
+      if (cart.length === 1) {
+        str += `${value} at $${cart[i][value]}`;
+      } else if(cart.length === 2 && i !== cart.length - 1) {
+        str += `${value} at $${cart[i][value]} `;
+      } else if(cart.length > 2 && i !== cart.length - 1) {
+        str += `${value} at $${cart[i][value]}, `;
+      } else if(i === cart.length - 1) {
+        str += `and ${value} at $${cart[i][value]}.`;
       }
     }
   }
-  console.log(str);
+  return str;
 }
 
 function total() {
