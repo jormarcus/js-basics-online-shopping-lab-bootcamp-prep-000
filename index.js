@@ -29,7 +29,7 @@ function viewCart() {
         str += `${value} at $${cart[i][value]} `;
       } else if(cart.length > 2 && i !== cart.length - 1) {
         str += `${value} at $${cart[i][value]}, `;
-      } else if(i === cart.length - 1 && cart.length > 1) {
+      } else if(i === cart.length - 1) {
         str += `and ${value} at $${cart[i][value]}.`;
       }
     }
