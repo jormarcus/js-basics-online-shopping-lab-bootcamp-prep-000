@@ -34,7 +34,13 @@ function viewCart() {
 }
 
 function total() {
-  for (var food)
+  var total = 0;
+  for (var i = 0; i < cart.length; i++) {
+    for (var food in cart[i]) {
+      total += cart[i][food];
+    }
+  }
+  return total;
 }
 
 function removeFromCart(item) {
