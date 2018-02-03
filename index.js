@@ -24,7 +24,7 @@ function viewCart() {
   for (var i = 0; i < cart.length; i++) {
     for (var value in cart[i]) {
       if (cart.length === 1) {
-        str += `${value} at $${cart[i][value]}`;
+        str += `${value} at $${cart[i][value]}.`;
       } else if(cart.length === 2 && i !== cart.length - 1) {
         str += `${value} at $${cart[i][value]} `;
       } else if(cart.length > 2 && i !== cart.length - 1) {
