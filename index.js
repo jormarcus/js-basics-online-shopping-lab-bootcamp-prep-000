@@ -29,6 +29,7 @@ function viewCart() {
        str += `${value} at $${cart[i][value]}.`
      }
   }
+  return str;
 }
 
 function total() {
