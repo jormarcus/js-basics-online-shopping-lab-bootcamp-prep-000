@@ -26,7 +26,7 @@ function viewCart() {
      if (i < cart.length - 1) {
        str += `${value} at $${cart[i][value]},`
      } else {
-       str += `${item} at $ ${price}.`
+       str += `${value} at $${cart[i][value]}.`
      }
   }
 }
