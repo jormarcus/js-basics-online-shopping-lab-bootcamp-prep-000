@@ -23,11 +23,11 @@ function viewCart() {
   }
   for (var i = 0; i < cart.length; i++) {
     for (var value in cart[i]) {
-     if (i < cart.length - 1) {
-       str += `${value} at $${cart[i][value]},`
-     } else {
-       str += `${value} at $${cart[i][value]}.`
-     }
+      if (i < cart.length - 1) {
+        str += `${value} at $${cart[i][value]},`
+      } else {
+        str += `${value} at $${cart[i][value]}.`
+      }
     }
   }
   return str;
