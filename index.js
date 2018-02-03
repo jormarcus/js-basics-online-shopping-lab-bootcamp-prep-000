@@ -22,8 +22,9 @@ function viewCart() {
     return 'Your shopping cart is empty.';
   }
   for (var i = 0; i < cart.length; i++) {
+    for (var value in cart[i])
      if (i < cart.length - 1) {
-       str += `${item} at $ ${price},`
+       str += `${value} at $${cart[i][value]},`
      } else {
        str += `${item} at $ ${price}.`
      }
