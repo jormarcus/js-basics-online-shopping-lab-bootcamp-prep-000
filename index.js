@@ -22,11 +22,11 @@ function viewCart() {
     console.log('Your shopping cart is empty.');
   }
   for (var i = 0; i < cart.length; i++) {
-    for (var value in cart[i]) {
+    for (var food in cart[i]) {
       if (i < cart.length - 1) {
-        str += `${value} at $${cart[i][value]}, `;
+        str += `${food} at $${cart[i][food]}, `;
       } else {
-        str += `and ${value} at $${cart[i][value]}.`;
+        str += `and ${food} at $${cart[i][food]}.`;
       }
     }
   }
@@ -34,7 +34,7 @@ function viewCart() {
 }
 
 function total() {
-  // write your code here
+  for (var food)
 }
 
 function removeFromCart(item) {
